@@ -22,7 +22,7 @@
     /* === SECCIÓN 1: HERO === */
     .hero-section {
       min-height: 100vh;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      background: linear-gradient(135deg, #0a0a0a 0%, #212124 50%, #1c1c1f 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -97,7 +97,7 @@
 
     /* === SECCIÓN 2: DESCRIPCIÓN DEL LIBRO === */
     .book-description-section {
-      background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);
+      background: linear-gradient(180deg, #b49634 0%, #FFCC33 100%);
       padding: 80px 20px;
     }
 
@@ -130,7 +130,7 @@
       font-family: Georgia, serif;
       font-size: clamp(1rem, 2vw, 1.2rem);
       line-height: 1.8;
-      color: #e0e0e0;
+      color: #000;
     }
 
     .book-text p {
@@ -138,12 +138,12 @@
     }
 
     .book-text strong {
-      color: #ffd700;
+      color: #000;
     }
 
     /* === SECCIÓN 3: CAPÍTULOS INTERACTIVOS === */
     .chapters-section {
-      background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%);
+      background: linear-gradient(135deg, #0a0a0a 0%, #212124 50%, #1c1c1f 100%);
       padding: 80px 20px;
     }
 
@@ -365,7 +365,7 @@
     }
 
     .cta-button {
-      background-color: #2b1e1a;
+      background-color: #1c1c1f;
       color: #ffcc66;
       padding: 20px 50px;
       font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -393,7 +393,7 @@
 
     /* === SECCIÓN 5: FAQ === */
     .faq-section {
-      background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+      background: linear-gradient(135deg, #0a0a0a 0%, #212124 50%, #1c1c1f 100%);
       padding: 80px 20px;
       font-family: Georgia, serif;
     }
@@ -779,13 +779,43 @@
       </div>
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>¿Cuanto cuesta?</span>
+          <span>¿De que trata?</span>
           <span class="faq-icon">▼</span>
         </div>
         <div class="faq-answer">
-          Después de completar tu compra, recibirás un correo electrónico con el enlace de acceso al ebook desde cualquier dispositivo (computadora, teléfono o tablet).
+          Este libro es una guía práctica y profunda que te enseña los principios fundamentales del estoicismo clásico aplicados al mundo moderno. Descubrirás cómo cultivar fortaleza mental, dominio emocional y claridad de propósito a través de las enseñanzas de los grandes maestros estoicos: Marco Aurelio, Epicteto y Séneca.
         </div>
       </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Para quién es este libro?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Para hombres y mujeres que buscan trascender en la vida y que aspiran a lograr sus sueños más profundos, aunque aún no sepan exactamente cómo hacerlo. Si sientes que mereces más de lo que tienes ahora y estás listo para tomar control de tu mente y tus emociones, este libro es para ti.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Qué voy a aprender?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Aprenderás a reprogramar tu mente para desarrollar autodisciplina, resiliencia y equilibrio emocional. Descubrirás cómo transformar el caos y la adversidad en oportunidades de crecimiento.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Cómo funciona la garantía?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Contarás con un período de garantía durante el cual podrás evaluar el contenido del libro. Si dentro de ese tiempo consideras que el ebook no cumplió con tus expectativas, podrás solicitar la devolución total del monto pagado.
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1010,44 +1040,4 @@
   </script>
 
 </body>
-</html> class="faq-question" onclick="toggleFAQ(this)">
-          <span>¿De qué trata "El Arte de la Fortaleza Estoica"?</span>
-          <span class="faq-icon">▼</span>
-        </div>
-        <div class="faq-answer">
-          Este libro es una guía práctica y profunda que te enseña los principios fundamentales del estoicismo clásico aplicados al mundo moderno. Descubrirás cómo cultivar fortaleza mental, dominio emocional y claridad de propósito a través de las enseñanzas de los grandes maestros estoicos: Marco Aurelio, Epicteto y Séneca.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>¿Para quién es este libro?</span>
-          <span class="faq-icon">▼</span>
-        </div>
-        <div class="faq-answer">
-          Para hombres y mujeres que buscan trascender en la vida y que aspiran a lograr sus sueños más profundos, aunque aún no sepan exactamente cómo hacerlo. Si sientes que mereces más de lo que tienes ahora y estás listo para tomar control de tu mente y tus emociones, este libro es para ti.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>¿Qué voy a aprender?</span>
-          <span class="faq-icon">▼</span>
-        </div>
-        <div class="faq-answer">
-          Aprenderás a reprogramar tu mente para desarrollar autodisciplina, resiliencia y equilibrio emocional. Descubrirás cómo transformar el caos y la adversidad en oportunidades de crecimiento.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>¿Cómo funciona la garantía?</span>
-          <span class="faq-icon">▼</span>
-        </div>
-        <div class="faq-answer">
-          Contarás con un período de garantía durante el cual podrás evaluar el contenido del libro. Si dentro de ese tiempo consideras que el ebook no cumplió con tus expectativas, podrás solicitar la devolución total del monto pagado.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div
+</html> 
