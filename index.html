@@ -391,6 +391,175 @@
       box-shadow: 0 0 35px rgba(255, 204, 102, 0.9);
     }
 
+
+    /* === SECCIÓN TESTIMONIOS === */
+    .testimonials-section {
+      background: linear-gradient(180deg, #000 0%, #1a1a2e 100%);
+      padding: 80px 20px;
+      overflow: hidden;
+    }
+
+    .testimonials-title {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #ffd700;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .testimonials-subtitle {
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #e0e0e0;
+      margin-bottom: 60px;
+      opacity: 0.9;
+    }
+
+    .testimonials-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .testimonials-wrapper {
+      flex: 1;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .testimonials-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      min-width: 100%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      border: 2px solid rgba(255,215,0,0.3);
+      border-radius: 16px;
+      padding: 40px 35px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,215,0,0.6);
+    }
+
+    .testimonial-stars {
+      color: #ffd700;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: 5px;
+    }
+
+    .testimonial-text {
+      font-family: Georgia, serif;
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      line-height: 1.8;
+      color: #e0e0e0;
+      font-style: italic;
+      flex-grow: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffd700 0%, #fbb034 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000;
+      flex-shrink: 0;
+    }
+
+    .author-info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .author-name {
+      font-size: clamp(1rem, 1.5vw, 1.1rem);
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .author-location {
+      font-family: Georgia, serif;
+      font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+      color: #b0b0b0;
+    }
+
+    .testimonial-nav {
+      background: rgba(255,215,0,0.2);
+      border: 2px solid #ffd700;
+      color: #ffd700;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .testimonial-nav:hover {
+      background: rgba(255,215,0,0.4);
+      transform: scale(1.1);
+    }
+
+    .testimonial-nav:active {
+      transform: scale(0.95);
+    }
+
+    .testimonial-dots {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,215,0,0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: #ffd700;
+      transform: scale(1.3);
+    }
+
+    .dot:hover {
+      background: rgba(255,215,0,0.6);
+    }
+
     /* === SECCIÓN 5: FAQ === */
     .faq-section {
       background: linear-gradient(135deg, #0a0a0a 0%, #212124 50%, #1c1c1f 100%);
@@ -771,6 +940,128 @@
     </div>
   </section>
 
+  <!-- SECCIÓN: TESTIMONIOS -->
+
+  <!-- SECCIÓN DE TESTIMONIOS -->
+  <section class="testimonials-section">
+    <h2 class="testimonials-title">Lo Que Nuestros Lectores Dicen</h2>
+    <p class="testimonials-subtitle">Miles de personas ya han transformado su vida con este libro</p>
+    
+    <div class="testimonials-container">
+      <!-- Navegación -->
+      <button class="testimonial-nav prev" id="testimonialPrev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <!-- Carrusel de testimonios -->
+      <div class="testimonials-wrapper">
+        <div class="testimonials-track" id="testimonialsTrack">
+          
+          <!-- Testimonio 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “Empecé a leerlo hace unos días y de verdad me está ayudando a mantener la calma en momentos difíciles. Súper recomendado 🙌✨”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M</div>
+              <div class="author-info">
+                <div class="author-name">María Fernanda López</div>
+                <div class="author-location">from Facebook</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “No pensé que un libro pudiera cambiar tanto mi forma de ver las cosas. ‘El Arte de la Fortaleza’ me hizo replantear cómo reacciono ante los problemas.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">J</div>
+              <div class="author-info">
+                <div class="author-name">Javier Ríos</div>
+                <div class="author-location">from Instagram</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “Me encantó! Es como una guía práctica para fortalecer la mente. Lo leo cada mañana antes de empezar el día 💪📖”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">C</div>
+              <div class="author-info">
+                <div class="author-name">Carlos Andrade</div>
+                <div class="author-location">from Youtube</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “Vi una reseña en TikTok y lo compré por curiosidad, pero wow... tiene enseñanzas que realmente te hacen reflexionar. 🔥”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div class="author-info">
+                <div class="author-name">Andrés Pérez</div>
+                <div class="author-location">from Instagram</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 5 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “Es un libro que transmite paz y claridad. Ideal para quienes quieren crecer emocionalmente y tener más control sobre sus pensamientos.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">C</div>
+              <div class="author-info">
+                <div class="author-name">Carolina Vega</div>
+                <div class="author-location">from Facebook</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 6 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “Después de leerlo, empecé a aplicar algunos principios estoicos y mi forma de manejar el estrés cambió por completo."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div class="author-info">
+                <div class="author-name">Sofia Torres</div>
+                <div class="author-location">from Facebook</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <button class="testimonial-nav next" id="testimonialNext">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="testimonial-dots" id="testimonialDots"></div>
+  </section>
+
+
+
   <!-- SECCIÓN 5: FAQ -->
   <section class="faq-section">
     <h2 class="faq-titulo">Preguntas Frecuentes</h2>
@@ -998,7 +1289,7 @@
       setTimeout(() => {
         autoRotate = true;
         startAutoRotation();
-      }, 10000);
+      }, 5000);
     }
 
     // Función para rotación automática
@@ -1058,6 +1349,127 @@
       // Iniciar rotación automática
       startAutoRotation();
     });
+
+    // === TESTIMONIOS CARRUSEL ===
+    let currentTestimonial = 0;
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const totalTestimonials = testimonialCards.length;
+    let testimonialInterval;
+
+    // Crear dots indicadores
+    function createDots() {
+      const dotsContainer = document.getElementById('testimonialDots');
+      for (let i = 0; i < totalTestimonials; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToTestimonial(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    // Actualizar posición del carrusel
+    function updateTestimonialPosition() {
+      const track = document.getElementById('testimonialsTrack');
+      const offset = -currentTestimonial * 100;
+      track.style.transform = `translateX(calc(${offset}% - ${currentTestimonial * 30}px))`;
+      
+      // Actualizar dots
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentTestimonial);
+      });
+    }
+
+    // Mover testimonio
+    function moveTestimonial(direction) {
+      currentTestimonial += direction;
+      
+      if (currentTestimonial < 0) {
+        currentTestimonial = totalTestimonials - 1;
+      } else if (currentTestimonial >= totalTestimonials) {
+        currentTestimonial = 0;
+      }
+      
+      updateTestimonialPosition();
+      resetTestimonialAutoplay();
+    }
+
+    // Ir a testimonio específico
+    function goToTestimonial(index) {
+      currentTestimonial = index;
+      updateTestimonialPosition();
+      resetTestimonialAutoplay();
+    }
+
+    // Autoplay de testimonios
+    function startTestimonialAutoplay() {
+      testimonialInterval = setInterval(() => {
+        moveTestimonial(1);
+      }, 5000);
+    }
+
+    // Reiniciar autoplay
+    function resetTestimonialAutoplay() {
+      clearInterval(testimonialInterval);
+      startTestimonialAutoplay();
+    }
+
+    // Inicializar testimonios al cargar la página
+    function initTestimonials() {
+      // Crear dots
+      createDots();
+      
+      // Agregar event listeners a botones de navegación
+      const prevBtn = document.getElementById('testimonialPrev');
+      const nextBtn = document.getElementById('testimonialNext');
+      
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => moveTestimonial(-1));
+      }
+      
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => moveTestimonial(1));
+      }
+      
+      // Iniciar autoplay
+      startTestimonialAutoplay();
+      
+      // Soporte para gestos táctiles en móviles
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      const wrapper = document.querySelector('.testimonials-wrapper');
+      
+      if (wrapper) {
+        wrapper.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        wrapper.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        });
+        
+        function handleSwipe() {
+          if (touchEndX < touchStartX - 50) {
+            moveTestimonial(1); // Swipe izquierda
+          }
+          if (touchEndX > touchStartX + 50) {
+            moveTestimonial(-1); // Swipe derecha
+          }
+        }
+      }
+    }
+
+    // Inicialización completa
+    window.addEventListener('DOMContentLoaded', () => {
+      // Inicializar testimonios
+      if (totalTestimonials > 0) {
+        initTestimonials();
+      }
+    });
+  
   </script>
 
 </body>
