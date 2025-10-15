@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Arte de la Fortaleza Estoica</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cinzel Decorative', serif;
+      color: #ffd700;
+      overflow-x: hidden;
+    }
+
+    /* === SECCIÓN 1: HERO === */
+    .hero-section {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+      animation: pulse-glow 8s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.1); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+    }
+
+    .hero-image {
+      max-width: 400px;
+      width: 80%;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 30px rgba(255,215,0,0.3));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 4rem);
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(255,215,0,0.5);
+      animation: fadeInDown 1.5s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      font-family: Georgia, serif;
+      color: #e0e0e0;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+
+    /* === SECCIÓN 2: DESCRIPCIÓN DEL LIBRO === */
+    .book-description-section {
+      background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);
+      padding: 80px 20px;
+    }
+
+    .book-description-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .book-image-wrapper {
+      text-align: center;
+    }
+
+    .book-image-main {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 12px;
+
+      transition: transform 0.3s ease;
+    }
+
+    .book-image-main:hover {
+      transform: scale(1.05);
+    }
+
+    .book-text {
+      font-family: Georgia, serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.8;
+      color: #e0e0e0;
+    }
+
+    .book-text p {
+      margin-bottom: 20px;
+    }
+
+    .book-text strong {
+      color: #ffd700;
+    }
+
+    /* === SECCIÓN 3: CAPÍTULOS INTERACTIVOS === */
+    .chapters-section {
+      background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%);
+      padding: 80px 20px;
+    }
+
+    .chapters-title {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 60px;
+      letter-spacing: 2px;
+    }
+
+    .chapters-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    /* LIBRO 3D MEJORADO */
+    .book-interactive-wrapper {
+      position: relative;
+      perspective: 2000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .book-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 1.4;
+    }
+
+    .book-spine {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      background: linear-gradient(90deg, #b9b8b8 0%, #b4b4b4 50%, #a5a4a4 100%);
+      transform: translateX(-50%);
+      z-index: 10;
+      border-radius: 4px;
+      box-shadow: 
+        -5px 0 15px rgba(128, 126, 126, 0.5),
+        5px 0 15px rgba(136, 133, 133, 0.5);
+    }
+
+    .book-page {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background: #f5f5f5;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-page.left {
+      left: 0;
+      border-right: 1px solid #ddd;
+    }
+
+    .book-page.right {
+      right: 0;
+      border-left: 1px solid #ddd;
+    }
+
+    /* Portada del libro (lado izquierdo) */
+    .book-cover-side {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Página de contenido (lado derecho) */
+    .page-content {
+      padding: 40px 30px;
+      background: #ffffff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .page-header {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .page-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      color: #1a1a1a;
+      font-weight: bold;
+      margin-bottom: 25px;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .page-text {
+      font-family: Georgia, serif;
+      font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+      color: #333;
+      line-height: 1.8;
+      text-align: justify;
+      flex-grow: 1;
+    }
+
+    .page-decoration {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    }
+
+    /* MENÚ DE CAPÍTULOS */
+    .chapters-menu {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid #ffd700;
+      border-radius: 12px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    .chapters-menu h3 {
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      margin-bottom: 25px;
+      text-align: center;
+      color: #ffd700;
+    }
+
+    .chapter-item {
+      font-family: Georgia, serif;
+      font-size: clamp(0.85rem, 1.3vw, 1rem);
+      color: #e0e0e0;
+      padding: 15px 18px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border-left: 3px solid transparent;
+    }
+
+    .chapter-item:hover {
+      background: rgba(255,215,0,0.1);
+      border-left-color: #ffd700;
+      transform: translateX(5px);
+    }
+
+    .chapter-item.active {
+      background: rgba(255,215,0,0.2);
+      color: #ffd700;
+      font-weight: bold;
+      transform: translateX(10px);
+      border-left-color: #ffd700;
+    }
+
+    /* === SECCIÓN 4: BOTÓN COMPRA === */
+    .cta-section {
+      background: #000;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .cta-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 3px solid #ffcc33;
+      border-radius: 20px;
+      padding: 50px 30px;
+      margin: auto;
+      max-width: 800px;
+    }
+
+    .cta-subtitle {
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      font-style: italic;
+      margin-bottom: 30px;
+      color: #ffcc33;
+    }
+
+    .cta-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffcc33;
+    }
+
+    .cta-price {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: bold;
+      color: #ffcc33;
+      margin: 20px 0;
+    }
+
+    .cta-price sup {
+      font-size: 0.5em;
+    }
+
+    .cta-old-price {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      text-decoration: line-through;
+      margin-left: 15px;
+      opacity: 0.7;
+    }
+
+    .cta-button {
+      background-color: #2b1e1a;
+      color: #ffcc66;
+      padding: 20px 50px;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      border: 4px solid #ffcc66;
+      border-radius: 20px;
+      text-decoration: none;
+      box-shadow: 0 0 25px rgba(255, 204, 102, 0.6);
+      display: inline-block;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+      animation: pulse-btn 2s infinite;
+    }
+
+    @keyframes pulse-btn {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .cta-button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 35px rgba(255, 204, 102, 0.9);
+    }
+
+    /* === SECCIÓN 5: FAQ === */
+    .faq-section {
+      background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+      padding: 80px 20px;
+      font-family: Georgia, serif;
+    }
+
+    .faq-titulo {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: bold;
+      color: #ffd700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 50px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .faq-question {
+      background: linear-gradient(135deg, #3d3d3d 0%, #2a2a2a 100%);
+      color: #ffd700;
+      padding: 20px 25px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+
+    .faq-question:hover {
+      background: linear-gradient(135deg, #4a4a4a 0%, #333333 100%);
+      border-left-color: #ffd700;
+    }
+
+    .faq-question.active {
+      background: linear-gradient(135deg, #ffd700 0%, #fbb034 100%);
+      color: #000;
+      border-left-color: #ffd700;
+    }
+
+    .faq-icon {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 15px;
+    }
+
+    .faq-question.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #e0e0e0;
+      padding: 0 25px;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      line-height: 1.8;
+      transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+      border-left: 4px solid #ffd700;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .faq-answer.active {
+      max-height: 500px;
+      padding: 25px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* === SECCIÓN 6: DECISIÓN === */
+    .seccion-decision {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      padding: 80px 20px;
+      color: #fff;
+      font-family: Georgia, serif;
+    }
+
+    .decision-titulo {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      color: #ffd700;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    .decision-contenido {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 2;
+      text-align: center;
+    }
+
+    .decision-contenido p {
+      margin-bottom: 30px;
+    }
+
+    .decision-contenido strong {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    .decision-quote {
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+      color: #fbb034;
+      margin-top: 40px;
+      padding: 20px;
+      border-left: 4px solid #ffd700;
+      background-color: rgba(255, 215, 0, 0.05);
+    }
+
+    /* === SECCIÓN 7: FOOTER === */
+    .footer-section {
+      background-color: #000;
+      color: #fbb034;
+      font-family: Georgia, serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .footer-guarantees {
+      margin-bottom: 30px;
+    }
+
+    .footer-guarantees img {
+      height: 100px;
+      margin: 10px;
+    }
+
+    .footer-payments img {
+      height: 25px;
+      margin: 5px;
+      vertical-align: middle;
+    }
+
+    .footer-text {
+      color: #fbb034;
+      font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .footer-legal {
+      color: #fbb034;
+      font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+      max-width: 900px;
+      margin: 30px auto;
+      text-align: justify;
+    }
+
+    .footer-social-title {
+      background-color: #fbb034;
+      color: #000;
+      padding: 20px 0;
+      font-weight: bold;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin: 30px 0 20px;
+    }
+
+    .footer-social-links {
+      background-color: #000;
+      padding: 20px;
+    }
+
+    .footer-social-links a {
+      margin: 0 15px;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .footer-social-links a:hover {
+      transform: scale(1.2);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 992px) {
+      .chapters-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .book-container {
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .book-description-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-section {
+        padding: 60px 20px 40px;
+      }
+
+      .cta-box {
+        padding: 40px 20px;
+      }
+
+      .faq-answer.active {
+        padding: 20px;
+      }
+
+      .page-content {
+        padding: 30px 20px;
+      }
+
+      .book-container {
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .book-container {
+        max-width: 320px;
+      }
+
+      .page-content {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECCIÓN 1: HERO -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <img src="EstoicismoInicio.png" alt="El Arte de la Fortaleza Estoica" class="hero-image" />
+      <h1 class="hero-title">EL ARTE DE LA FORTALEZA ESTOICA</h1>
+      <p class="hero-subtitle">
+        En un mundo dominado por el caos y la incertidumbre, la fortaleza estoica emerge como un arte supremo: una disciplina del alma que forja carácter, templanza y dominio interno.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: DESCRIPCIÓN DEL LIBRO -->
+  <section class="book-description-section">
+    <div class="book-description-container">
+      <div class="book-image-wrapper">
+        <img src="libro_vario.png" alt="El Arte de la Fortaleza Estoica" class="book-image-main" />
+      </div>
+      <div class="book-text">
+        <p>
+          <strong>"El Arte de la Fortaleza Estoica"</strong> no es solo un libro, es una declaración de guerra contra la fragilidad interna. Aquí encontrarás la esencia atemporal del estoicismo clásico llevada al terreno feroz del mundo moderno.
+        </p>
+        <p>
+          ¿Cómo mantener la templanza en medio de la tormenta? ¿Cómo avanzar con firmeza cuando todo tiembla?
+        </p>
+        <p>
+          Esta obra te guía a través del pensamiento de los grandes sabios de la antigüedad, enseñándote a forjar autodisciplina, dominio emocional y fuerza de carácter. No es solo lectura: es entrenamiento mental, un escudo contra la debilidad y una espada contra el caos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: CAPÍTULOS INTERACTIVOS -->
+  <section class="chapters-section">
+    <h2 class="chapters-title">EXPLORA EL CONTENIDO</h2>
+    <div class="chapters-container">
+      
+      <!-- LIBRO INTERACTIVO -->
+      <div class="book-interactive-wrapper">
+        <div class="book-container">
+          <!-- Página izquierda (Portada) -->
+          <div class="book-page left">
+            <img src="libro_individual.png" alt="Portada" class="book-cover-side" />
+          </div>
+
+          <!-- Lomo del libro -->
+          <div class="book-spine"></div>
+
+          <!-- Página derecha (Contenido) -->
+          <div class="book-page right">
+            <div class="page-content">
+              <div class="page-header">CAPÍTULO</div>
+              <div class="page-title" id="currentChapterTitle">El poder de la razón: vivir conforme a la naturaleza</div>
+              <div class="page-text" id="currentChapterText">
+                La razón es la herramienta más poderosa que poseemos. Los estoicos creían que vivir de acuerdo con la naturaleza significa vivir de acuerdo con la razón...
+              </div>
+              <div class="page-decoration"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENÚ DE CAPÍTULOS -->
+      <div class="chapters-menu">
+        <h3>Índice de Capítulos</h3>
+        <div class="chapter-item active" data-index="0">
+          📖 Capítulo 1: El poder de la razón
+        </div>
+        <div class="chapter-item" data-index="1">
+          📖 Capítulo 2: Lo que depende de ti
+        </div>
+        <div class="chapter-item" data-index="2">
+          📖 Capítulo 3: Las cuatro virtudes
+        </div>
+        <div class="chapter-item" data-index="3">
+          📖 Capítulo 4: La dicotomía del control
+        </div>
+        <div class="chapter-item" data-index="4">
+          📖 Capítulo 5: Afrontar la adversidad
+        </div>
+        <div class="chapter-item" data-index="5">
+          📖 Capítulo 6: La muerte y la fugacidad
+        </div>
+        <div class="chapter-item" data-index="6">
+          📖 Capítulo 7: Autodisciplina
+        </div>
+        <div class="chapter-item" data-index="7">
+          📖 Capítulo 8: Deber y acción virtuosa
+        </div>
+        <div class="chapter-item" data-index="8">
+          📖 Capítulo 9: Relaciones humanas
+        </div>
+        <div class="chapter-item" data-index="9">
+          📖 Capítulo 10: Manejar emociones
+        </div>
+        <div class="chapter-item" data-index="10">
+          📖 Capítulo 11: Contemplación estoica
+        </div>
+        <div class="chapter-item" data-index="11">
+          📖 Capítulo 12: Estoicismo y liderazgo
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: LLAMADO A LA ACCIÓN -->
+  <section class="cta-section">
+    <div class="cta-box">
+      <div class="cta-subtitle">
+        ¡Haz clic en el botón "Quiero mi libro"!
+      </div>
+      <div class="cta-title">
+        OFERTA ESPECIAL
+      </div>
+      <div class="cta-price">
+        <span style="font-size: 30px; vertical-align: super;">USD</span> 9.<sup>99</sup>
+        <span class="cta-old-price">ANTES 19.99</span>
+      </div>
+      <a href="https://pay.hotmart.com/F102218158T?checkoutMode=10" class="cta-button">
+        Quiero mi libro
+      </a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: FAQ -->
+  <section class="faq-section">
+    <h2 class="faq-titulo">Preguntas Frecuentes</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Cómo acceder al libro?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Después de completar tu compra, recibirás un correo electrónico con el enlace de acceso al ebook desde cualquier dispositivo (computadora, teléfono o tablet).
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Cuanto cuesta?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Después de completar tu compra, recibirás un correo electrónico con el enlace de acceso al ebook desde cualquier dispositivo (computadora, teléfono o tablet).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: DECISIÓN -->
+  <section class="seccion-decision">
+    <h2 class="decision-titulo">LA DECISIÓN ESTÁ EN TUS MANOS</h2>
+    <div class="decision-contenido">
+      <p>
+        Hoy, este libro está disponible por solo <strong>$9.99 USD</strong>. Puede parecer un simple ebook, pero en realidad es una herramienta que puede transformar tu mentalidad y forjar tu carácter interno.
+      </p>
+      <p>
+        Piensa en esto: <strong>¿Cuántas veces has gastado dinero en cosas pasajeras como un café, una cena o una suscripción que nunca aprovechaste?</strong>
+      </p>
+      <p>
+        Pero <strong>"El Arte de la Fortaleza Estoica"</strong> no es un gasto, es una inversión en ti mismo, en tu mente, en tu futuro y en la vida que mereces vivir.
+      </p>
+      <div class="decision-quote">
+        Como dijo Marco Aurelio: <strong>"Tienes poder sobre tu mente, no sobre los acontecimientos externos. Date cuenta de esto, y encontrarás fortaleza."</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: FOOTER -->
+  <section class="footer-section">
+    <div class="footer-guarantees">
+      <img src="7garantia.png" alt="Garantía 7 días" />
+      <img src="100garantia.png" alt="Satisfacción garantizada" />
+    </div>
+
+    <div class="footer-payments">
+      <img src="hotmart_logo.png" alt="Hotmart" />
+      <img src="visa_logo.png" alt="Visa" />
+      <img src="master_logo.png" alt="Mastercard" />
+      <img src="american_logo.png" alt="American Express" />
+      <img src="paypal_logo.png" alt="PayPal" />
+    </div>
+
+    <div class="footer-text">
+      <p><strong>PRIVACIDAD:</strong> TU INFORMACIÓN ESTÁ 100% SEGURA.<br>
+      <strong>COMPRA SEGURA:</strong> AMBIENTE SEGURO Y AUTENTICADO.<br>
+      <strong>ENTREGA POR EMAIL:</strong> ACCESO AL PRODUCTO ENTREGADO POR EMAIL.<br>
+      <strong>CONTENIDO APROBADO:</strong> 100% REVISADO Y APROBADO.</p>
+    </div>
+
+    <div class="footer-legal">
+      <p>ESTE PRODUCTO ES COMERCIALIZADO CON EL APOYO DE HOTMART. LA PLATAFORMA NO REALIZA UN CONTROL EDITORIAL PREVIO DE LOS PRODUCTOS VENDIDOS, NI EVALÚA EL TECNICISMO Y LA EXPERIENCIA DE QUIENES LOS ELABORAN.</p>
+    </div>
+
+    <div class="footer-social-title">
+      NUESTRAS REDES
+    </div>
+
+    <div class="footer-social-links">
+      <a href="https://www.facebook.com/profile.php?id=61576728899822" target="_blank" style="color: #1877f2;">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/estoicodigital/" target="_blank" style="color: #E1306C;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@estoico_digital" target="_blank" style="color: #fff;">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://youtube.com/@estoico_digital-x6s?si=Yxl4krHqoFkXP1Zl" target="_blank" style="color: #FF0000;">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    // Base de datos de capítulos
+    const chaptersData = [
+      {
+        title: "El poder de la razón: vivir conforme a la naturaleza",
+        text: "Invita a vivir con lógica y equilibrio, actuando según los principios naturales y enfocándose en lo que se puede controlar"
+      },
+      {
+        title: "Lo que depende de ti y lo que no",
+        text: "Explica cómo distinguir entre lo que está bajo tu control y lo que no, para alcanzar paz interior."
+      },
+      {
+        title: "Las cuatro virtudes estoicas",
+        text: "Describe cómo aplicar sabiduría, coraje, justicia y templanza en la vida diaria para fortalecer el carácter."
+      },
+      {
+        title: "La dicotomía del control",
+        text: "Muestra cómo liberar energía dejando ir lo que no puedes cambiar y concentrarte en tus decisiones y actitudes."
+      },
+      {
+        title: "Cómo afrontar la adversidad con serenidad",
+        text: "Enseña a transformar los obstáculos en oportunidades y mantener la calma en tiempos difíciles."
+      },
+      {
+        title: "La muerte y la fugacidad de la vida",
+        text: "Reflexiona sobre la mortalidad como una forma de valorar más la vida y vivir con propósito."
+      },
+      {
+        title: "El valor de la autodisciplina",
+        text: "Destaca la importancia de dominar los impulsos y cultivar hábitos que fortalezcan la voluntad."
+      },
+      {
+        title: "El rol del deber y la acción virtuosa",
+        text: "Motiva a cumplir el propio propósito con integridad y hallar sentido en cada acción."
+      },
+      {
+        title: "Relaciones humanas: compasión sin apego",
+        text: "Promueve amar con empatía sin depender emocionalmente, manteniendo equilibrio interior."
+      },
+      {
+        title: "Cómo manejar emociones intensas",
+        text: "Explica cómo observar y transformar las emociones sin dejar que te dominen."
+      },
+      {
+        title: "Silencio, contemplación y journaling estoico",
+        text: "Fomenta la reflexión diaria, la meditación y la escritura para conocerse y crecer."
+      },
+      {
+        title: "Estoicismo y liderazgo: gobernarse para gobernar",
+        text: "Enseña que liderar empieza por dominarse a uno mismo, guiando con virtud y ejemplo."
+      }
+    ];
+
+    let currentChapterIndex = 0;
+    let autoRotate = true;
+    let rotationInterval;
+
+    // Función para actualizar el contenido del libro
+    function updateBookContent(index) {
+      const titleElement = document.getElementById('currentChapterTitle');
+      const textElement = document.getElementById('currentChapterText');
+      
+      titleElement.style.opacity = '0';
+      textElement.style.opacity = '0';
+      
+      setTimeout(() => {
+        titleElement.textContent = chaptersData[index].title;
+        textElement.textContent = chaptersData[index].text;
+        titleElement.style.opacity = '1';
+        textElement.style.opacity = '1';
+      }, 300);
+    }
+
+    // Función para seleccionar capítulo manualmente
+    function selectChapter(index) {
+      currentChapterIndex = index;
+      
+      // Actualizar menú
+      const allItems = document.querySelectorAll('.chapter-item');
+      allItems.forEach(item => item.classList.remove('active'));
+      allItems[index].classList.add('active');
+      
+      // Actualizar libro
+      updateBookContent(index);
+      
+      // Pausar rotación automática temporalmente
+      autoRotate = false;
+      clearInterval(rotationInterval);
+      
+      // Reanudar después de 10 segundos
+      setTimeout(() => {
+        autoRotate = true;
+        startAutoRotation();
+      }, 10000);
+    }
+
+    // Función para rotación automática
+    function rotateChapter() {
+      if (!autoRotate) return;
+      
+      currentChapterIndex = (currentChapterIndex + 1) % chaptersData.length;
+      
+      const allItems = document.querySelectorAll('.chapter-item');
+      allItems.forEach(item => item.classList.remove('active'));
+      allItems[currentChapterIndex].classList.add('active');
+      
+      updateBookContent(currentChapterIndex);
+    }
+
+    // Iniciar rotación automática
+    function startAutoRotation() {
+      rotationInterval = setInterval(rotateChapter, 4000);
+    }
+
+    // FAQ Toggle
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const allQuestions = document.querySelectorAll('.faq-question');
+      const allAnswers = document.querySelectorAll('.faq-answer');
+      
+      allQuestions.forEach(q => {
+        if (q !== element) {
+          q.classList.remove('active');
+        }
+      });
+      
+      allAnswers.forEach(a => {
+        if (a !== answer) {
+          a.classList.remove('active');
+        }
+      });
+      
+      element.classList.toggle('active');
+      answer.classList.toggle('active');
+    }
+
+    // Inicialización
+    window.addEventListener('DOMContentLoaded', () => {
+      // Añadir transición suave al contenido
+      const titleElement = document.getElementById('currentChapterTitle');
+      const textElement = document.getElementById('currentChapterText');
+      titleElement.style.transition = 'opacity 0.3s ease';
+      textElement.style.transition = 'opacity 0.3s ease';
+      
+      // Agregar event listeners a los capítulos
+      const chapterItems = document.querySelectorAll('.chapter-item');
+      chapterItems.forEach((item, index) => {
+        item.addEventListener('click', () => selectChapter(index));
+      });
+      
+      // Iniciar rotación automática
+      startAutoRotation();
+    });
+  </script>
+
+</body>
+</html> class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿De qué trata "El Arte de la Fortaleza Estoica"?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Este libro es una guía práctica y profunda que te enseña los principios fundamentales del estoicismo clásico aplicados al mundo moderno. Descubrirás cómo cultivar fortaleza mental, dominio emocional y claridad de propósito a través de las enseñanzas de los grandes maestros estoicos: Marco Aurelio, Epicteto y Séneca.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Para quién es este libro?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Para hombres y mujeres que buscan trascender en la vida y que aspiran a lograr sus sueños más profundos, aunque aún no sepan exactamente cómo hacerlo. Si sientes que mereces más de lo que tienes ahora y estás listo para tomar control de tu mente y tus emociones, este libro es para ti.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Qué voy a aprender?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Aprenderás a reprogramar tu mente para desarrollar autodisciplina, resiliencia y equilibrio emocional. Descubrirás cómo transformar el caos y la adversidad en oportunidades de crecimiento.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Cómo funciona la garantía?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Contarás con un período de garantía durante el cual podrás evaluar el contenido del libro. Si dentro de ese tiempo consideras que el ebook no cumplió con tus expectativas, podrás solicitar la devolución total del monto pagado.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div
