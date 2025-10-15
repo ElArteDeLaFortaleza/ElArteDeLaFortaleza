@@ -19,6 +19,39 @@
       overflow-x: hidden;
     }
 
+    .timer-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      background: linear-gradient(rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.87)), url('fondo.jpg') center/cover no-repeat;
+      color: #fbb034;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+        
+
+        .timer {
+          font-size: 32px;
+          margin-right: 15px;
+          color: #fbb034;
+        }
+
+        .icon {
+          margin: 0 10px;
+          color: #fbb034;
+        }
+      .capitulo li {
+      font-size: 1.2rem;
+    }
+
     /* === SECCIÓN 1: HERO === */
     .hero-section {
       min-height: 100vh;
@@ -759,6 +792,13 @@
 
     /* === RESPONSIVE === */
     @media (max-width: 992px) {
+      .timer{
+        font-size: 15px;
+      }
+
+      .timer-banner{
+        font-size: 14px;
+      }
       .chapters-container {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -770,6 +810,14 @@
     }
 
     @media (max-width: 768px) {
+      .timer{
+        font-size: 12px;
+      }
+
+      .timer-banner{
+        font-size: 10px;
+      }
+
       .book-description-container {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -826,6 +874,15 @@
     }
 
     @media (max-width: 480px) {
+
+      .timer{
+        font-size: 12px;
+      }
+
+      .timer-banner{
+        font-size: 10px;
+      }
+
       .book-container {
         max-width: 320px;
       }
@@ -857,6 +914,13 @@
   </style>
 </head>
 <body>
+
+  <!-- TIMER -->
+  <div class="timer-banner">
+    <div class="timer" id="countdown">01 : 00 : 00</div>
+    <div><i class="fas fa-stopwatch icon"></i>Estás a un solo click de transformar tu vida con el libro digital <strong>"El Arte de la Fortaleza"</strong></div>
+  </div>
+
 
   <!-- SECCIÓN 1: HERO -->
   <section class="hero-section">
@@ -1237,6 +1301,31 @@
   </section>
 
   <script>
+    // Timer countdown
+  function startTimer(duration, display) {
+    let timer = duration, hours, minutes, seconds;
+
+    setInterval(function () {
+      hours = Math.floor(timer / 3600);
+      minutes = Math.floor((timer % 3600) / 60);
+      seconds = timer % 60;
+
+      display.textContent =
+        (hours < 10 ? "0" + hours : hours) + " : " +
+        (minutes < 10 ? "0" + minutes : minutes) + " : " +
+        (seconds < 10 ? "0" + seconds : seconds);
+
+      if (--timer < 0) {
+        timer = duration;
+      }
+    }, 1000);
+  }
+
+  window.onload = function () {
+    const fifteenMinutes = 15 * 60;
+    const display = document.getElementById('countdown');
+    startTimer(fifteenMinutes, display);
+  };
     // Base de datos de capítulos
     const chaptersData = [
       {
