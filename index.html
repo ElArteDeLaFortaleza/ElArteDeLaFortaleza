@@ -473,7 +473,8 @@
 
     .testimonial-card {
       min-width: 100%;
-      background: linear-gradient(135deg, rgba(54, 51, 51, 0.884) 0%, rgb(59, 57, 57) 100%);
+      /*background: linear-gradient(135deg, rgba(54, 51, 51, 0.884) 0%, rgb(59, 57, 57) 100%);*/
+      background: rgba(238, 236, 236, 0.945);
       border: 2px solid rgba(255,215,0,0.3);
       border-radius: 16px;
       padding: 40px 35px;
@@ -487,20 +488,16 @@
 
     .testimonial-card:hover {
       transform: translateY(-5px);
+      border-radius: 16px;
       border-color: rgba(255,215,0,0.6);
     }
 
-    .testimonial-stars {
-      color: #ffd700;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      letter-spacing: 5px;
-    }
 
     .testimonial-text {
       font-family: Georgia, serif;
       font-size: clamp(1rem, 1.8vw, 1.15rem);
       line-height: 1.8;
-      color: #e0e0e0;
+      color: #000000;
       font-style: italic;
       flex-grow: 1;
     }
@@ -525,6 +522,11 @@
       color: #000;
       flex-shrink: 0;
     }
+    .author-avatar img{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
 
     .author-info {
       display: flex;
@@ -535,13 +537,13 @@
     .author-name {
       font-size: clamp(1rem, 1.5vw, 1.1rem);
       font-weight: bold;
-      color: #ffd700;
+      color: #221e09;
     }
 
     .author-location {
       font-family: Georgia, serif;
       font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-      color: #b0b0b0;
+      color: #444343;
     }
 
     .testimonial-nav {
@@ -849,15 +851,23 @@
       .book-container {
         max-width: 320px;
       }
+      
+      .page-header{
+        margin-bottom: 3px;
+        font-size: 9px;
+      }
 
       .page-content {
         padding: 20px 15px;
         overflow: hidden;
       }
       .page-title{
-        font-size: 15px;
+        font-size: 12px;
+        margin-bottom: 2px;
+        overflow: hidden;
       }
       .page-text{
+        margin-top: 1px;
         font-size: 9px;
       }
 
@@ -870,7 +880,7 @@
       }
 
       .testimonial-card {
-        padding: 30px 25px;
+        padding: 25px 25px;
       }
       .cta-price{
         font-size: 30px;
@@ -908,16 +918,23 @@
         padding: 25px 20px;
         flex: 0 0 90vw; 
         width: 90vw; /* Asegura el ancho */
-        margin-left: 1.6vw; /* Empuja la primera tarjeta 5vw desde el borde izquierdo */
+        position: center;
+        margin-left: 0.5vw; /* margin-left: 1vw; Empuja la primera tarjeta 5vw desde el borde izquierdo */
       }
-      .testimonials-track .testimonial-card:last-child {
-        margin-right: 2.3vw; /* Añade un margen al final para que el scroll se centre bien */
-    }
+      
 
       .author-avatar {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
+      }
+      .author-avatar img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+      .testimonial-text{
+        font-size: 13px;
       }
 
     }
@@ -1073,12 +1090,13 @@
           
           <!-- Testimonio 1 -->
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
               “Desde que lo leí, empecé a reaccionar distinto ante las cosas que antes me sacaban de quicio 😅. Literalmente me ayudó a mantener la calma.”
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">M</div>
+              <div class="author-avatar">
+                <img src="perfil1.webp" alt="Perfil 1">
+              </div>
               <div class="author-info">
                 <div class="author-name">María Fernanda López</div>
                 <div class="author-location">from Facebook</div>
@@ -1088,12 +1106,13 @@
 
           <!-- Testimonio 2 -->
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
               “Lo compré porque vi varios TikToks hablando de él, y sí… tenían razón. Te deja con otra mentalidad 💫"
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">J</div>
+              <div class="author-avatar">
+                <img src="perfil2.webp" alt="Perfil 2">
+              </div>
               <div class="author-info">
                 <div class="author-name">Javier Ríos</div>
                 <div class="author-location">from Instagram</div>
@@ -1103,12 +1122,13 @@
 
           <!-- Testimonio 3 -->
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
               “Me encantó! Es como una guía práctica para fortalecer la mente. Lo leo cada mañana antes de empezar el día 💪📖”
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">C</div>
+              <div class="author-avatar">
+                <img src="perfil3.webp" alt="Perfil 3">
+              </div>
               <div class="author-info">
                 <div class="author-name">Carlos Andrade</div>
                 <div class="author-location">from Youtube</div>
@@ -1118,12 +1138,13 @@
 
           <!-- Testimonio 4 -->
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
               “No soy fan de los libros de desarrollo personal, pero este me encantó. Es más profundo, más real. Te da claridad.”
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">A</div>
+              <div class="author-avatar">
+                <img src="perfil4.webp" alt="Perfil 4">
+              </div>
               <div class="author-info">
                 <div class="author-name">Andrés Pérez</div>
                 <div class="author-location">from Instagram</div>
@@ -1133,12 +1154,13 @@
 
           <!-- Testimonio 5 -->
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
               “Soy cero espiritual y aún así me encantó. Tiene sentido, te hace pensar y te da herramientas reales para estar en paz contigo mismo.”
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">C</div>
+              <div class="author-avatar">
+                <img src="perfil5.webp" alt="Perfil 5">
+              </div>
               <div class="author-info">
                 <div class="author-name">Carolina Vega</div>
                 <div class="author-location">from Facebook</div>
@@ -1148,12 +1170,13 @@
 
           <!-- Testimonio 6 -->
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
               “Lo leí con mi café de la mañana y fue como terapia. 🧘‍♀️☕."
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">G</div>
+              <div class="author-avatar">
+                <img src="perfil6.webp" alt="Perfil 6">
+              </div>
               <div class="author-info">
                 <div class="author-name">Gianella Olivares</div>
                 <div class="author-location">from Facebook</div>
@@ -1163,12 +1186,13 @@
 
           <!-- Testimonio 7 -->
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
               “No sabía que era el estoicismo, solo lo descargué por la portada. Pero no pensé que me ayudaría tanto en mi vida actual."
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">S</div>
+              <div class="author-avatar">
+                <img src="perfil7.webp" alt="Perfil 7">
+              </div>
               <div class="author-info">
                 <div class="author-name">Sofia Torres</div>
                 <div class="author-location">from Facebook</div>
@@ -1178,12 +1202,13 @@
 
           <!-- Testimonio 8 -->
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
               “Ya lo recomendé a tres amigos. Todos estamos más tranquilos jaja."
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">D</div>
+              <div class="author-avatar">
+                <img src="perfil8.webp" alt="Perfil 8">
+              </div>
               <div class="author-info">
                 <div class="author-name">Diego Martinez</div>
                 <div class="author-location">from Facebook</div>
