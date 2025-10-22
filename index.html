@@ -425,177 +425,6 @@
       box-shadow: 0 0 35px rgba(255, 204, 102, 0.9);
     }
 
-
-    /* === SECCIÓN TESTIMONIOS === */
-    .testimonials-section {
-      background: linear-gradient(180deg, #b49634 0%, #ffcc33 100%);
-      padding: 80px 20px;
-      overflow: hidden;
-    }
-
-    .testimonials-title {
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: #030303;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
-    }
-
-    .testimonials-subtitle {
-      text-align: center;
-      font-family: Georgia, serif;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: #0f0f0f;
-      margin-bottom: 60px;
-      opacity: 0.9;
-    }
-
-    .testimonials-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .testimonials-wrapper {
-      flex: 1;
-      overflow: hidden;
-      border-radius: 12px;
-    }
-
-    .testimonials-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      gap: 30px;
-    }
-
-    .testimonial-card {
-      min-width: 100%;
-      /*background: linear-gradient(135deg, rgba(54, 51, 51, 0.884) 0%, rgb(59, 57, 57) 100%);*/
-      background: rgba(238, 236, 236, 0.945);
-      border: 2px solid rgba(255,215,0,0.3);
-      border-radius: 16px;
-      padding: 40px 35px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      transition: transform 0.3s ease;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      border-radius: 16px;
-      border-color: rgba(255,215,0,0.6);
-    }
-
-
-    .testimonial-text {
-      font-family: Georgia, serif;
-      font-size: clamp(1rem, 1.8vw, 1.15rem);
-      line-height: 1.8;
-      color: #000000;
-      font-style: italic;
-      flex-grow: 1;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .author-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #ffd700 0%, #fbb034 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #000;
-      flex-shrink: 0;
-    }
-    .author-avatar img{
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-    }
-
-    .author-info {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .author-name {
-      font-size: clamp(1rem, 1.5vw, 1.1rem);
-      font-weight: bold;
-      color: #221e09;
-    }
-
-    .author-location {
-      font-family: Georgia, serif;
-      font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-      color: #444343;
-    }
-
-    .testimonial-nav {
-      background: rgba(82, 80, 72, 0.418);
-      border: 2px solid #3f3f38ce;
-      color: #20201bd2;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .testimonial-nav:hover {
-      background: rgba(255,215,0,0.4);
-      transform: scale(1.1);
-    }
-
-    .testimonial-nav:active {
-      transform: scale(0.95);
-    }
-
-    .testimonial-dots {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 40px;
-    }
-
-    .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(31, 30, 29, 0.3);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .dot.active {
-      background: #5f5f5d;
-      transform: scale(1.3);
-    }
-
-    .dot:hover {
-      background: rgba(255,215,0,0.6);
-    }
-
     /* === SECCIÓN 5: FAQ === */
     .faq-section {
       background: linear-gradient(135deg, #0a0a0a 0%, #212124 50%, #1c1c1f 100%);
@@ -879,9 +708,6 @@
         gap: 20px;
       }
 
-      .testimonial-card {
-        padding: 25px 25px;
-      }
       .cta-price{
         font-size: 30px;
       }
@@ -914,15 +740,6 @@
         gap: 20px;
     }
 
-      .testimonial-card {
-        padding: 25px 20px;
-        flex: 0 0 90vw; 
-        width: 90vw; /* Asegura el ancho */
-        position: center;
-        margin-left: 0.5vw; /* margin-left: 1vw; Empuja la primera tarjeta 5vw desde el borde izquierdo */
-      }
-      
-
       .author-avatar {
         width: 40px;
         height: 40px;
@@ -938,6 +755,228 @@
       }
 
     }
+
+
+    /* === SECCIÓN 3 - TESTIMONIOS === */
+  .fondo-testimonio {
+      background-color:#fbb034;
+      display: flex;
+      min-height: 550px;
+      color: white;
+      padding: 60px 20px;
+  }
+  
+  .columna-izquierda-t {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+  }
+  
+  .columna-derecha-t {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+  }
+  
+  #carrusel-tarjetas {
+      position: relative;
+      width: 100%;
+      max-width: 450px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  /* FIX CRÍTICO: Mejorar el diseño de las tarjetas */
+  .tarjeta {
+      position: absolute;
+      width: 100%;
+      padding: 20px;
+      background-color: white;
+      color: #333;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 15px;
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      min-height: 150px;
+  }
+  
+  .perfil {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      width: 100%;
+  }
+  
+  .perfil img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+  }
+  
+  .perfil .info {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+  }
+  
+  .perfil strong {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;font: Roboto;
+      font-size: 1.1em;
+      font-weight: 700;
+  }
+  
+  .perfil span {
+     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;font: Roboto;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+      margin-top: 5px;
+  }
+  
+  .tarjeta.central {
+      opacity: 1;
+      transform: translateY(0) scale(1.05);
+      z-index: 10;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tarjeta.arriba {
+      opacity: 0.3;
+      transform: translateY(-70px) scale(0.9);
+      z-index: 5;
+      pointer-events: none;
+  }
+  
+  .tarjeta.abajo {
+      opacity: 0.3;
+      transform: translateY(70px) scale(0.9);
+      z-index: 5;
+      pointer-events: none;
+  }
+  
+  .tarjeta.oculto {
+      opacity: 0;
+      transform: translateY(200px) scale(0.8);
+      z-index: 1;
+      pointer-events: none;
+  }
+  
+  /* Media Queries SECCIÓN 3 */
+  @media (max-width: 900px) {
+      .fondo-testimonio {
+          flex-direction: column;
+          min-height: auto;
+          padding: 40px 15px;
+      }
+      .columna-izquierda-t,
+      .columna-derecha-t {
+          width: 100%;
+          padding: 0 15px; /* AJUSTADO */
+          margin-bottom: 20px;
+      }
+      .columna-izquierda-t h2 {
+          font-size: 1.8em; /* AJUSTADO */
+          margin-bottom: 10px;
+      }
+  
+      #carrusel-tarjetas {
+          height: 300px; /* AJUSTADO para mejor ajuste */
+          max-width: 90%;
+      }
+  
+      .tarjeta {
+          padding: 15px; /* AJUSTADO */
+          min-height: 120px; /* AJUSTADO */
+      }
+  
+      .perfil {
+          align-items: center;
+      }
+      .perfil img {
+          width: 45px; /* AJUSTADO */
+          height: 45px;
+      }
+  
+      .perfil strong {
+          font-size: 0.95em;
+      }
+      .perfil span {
+          font-size: 0.85em;
+          line-height: 1.3;
+          margin-top: 2px;
+      }
+  
+      .tarjeta.central {
+          transform: translateY(0) scale(1);
+      }
+  
+      .tarjeta.arriba {
+          transform: translateY(-55px) scale(0.95);
+      }
+      .tarjeta.abajo {
+          transform: translateY(55px) scale(0.95);
+      }
+  }
+  
+  @media (max-width: 500px) {
+      .fondo-testimonio {
+          padding: 30px 10px;
+      }
+  
+      #carrusel-tarjetas {
+          height: 310px; /* AJUSTADO */
+          max-width: 95%;
+      }
+  
+      .tarjeta {
+          padding: 12px; /* AJUSTADO */
+          min-height: 100px; /* AJUSTADO */
+      }
+  
+      .tarjeta.central {
+          transform: translateY(0) scale(1.0);
+      }
+  
+      .perfil {
+          align-items: center;
+      }
+      .perfil img {
+          width: 40px;
+          height: 40px;
+      }
+  
+      .perfil strong {
+          font-size: 0.9em;
+      }
+      .perfil span {
+          font-size: 0.8em;
+          line-height: 1.2;
+          margin-top: 2px;
+      }
+  
+      .tarjeta.arriba {
+          transform: translateY(-60px) scale(0.9);
+      }
+      .tarjeta.abajo {
+          transform: translateY(60px) scale(0.9);
+      }
+  
+      .columna-izquierda-t h2 {
+          font-size: 1.6em;
+      }
+  }
   </style>
 </head>
 <body>
@@ -1073,161 +1112,161 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE TESTIMONIOS -->
-  <section class="testimonials-section">
-    <h2 class="testimonials-title">Lo Que Nuestros Lectores Dicen</h2>
-    <p class="testimonials-subtitle">Miles de personas ya han transformado su vida con este libro</p>
-    
-    <div class="testimonials-container">
-      <!-- Navegación -->
-      <button class="testimonial-nav prev" id="testimonialPrev">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      
-      <!-- Carrusel de testimonios -->
-      <div class="testimonials-wrapper">
-        <div class="testimonials-track" id="testimonialsTrack">
-          
-          <!-- Testimonio 1 -->
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              “Desde que lo leí, empecé a reaccionar distinto ante las cosas que antes me sacaban de quicio 😅. Literalmente me ayudó a mantener la calma.”
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="perfil1.webp" alt="Perfil 1">
-              </div>
-              <div class="author-info">
-                <div class="author-name">María Fernanda López</div>
-                <div class="author-location">from Facebook</div>
-              </div>
+<!-- SeCCIÓN DE TESTIMONIOS -->
+     <div class="fondo-testimonio">
+        <div class="columna-izquierda-t">
+            <h2>Los testimonios de nuestros compradores.</h2>
             </div>
-          </div>
 
-          <!-- Testimonio 2 -->
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              “Lo compré porque vi varios TikToks hablando de él, y sí… tenían razón. Te deja con otra mentalidad 💫"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="perfil2.webp" alt="Perfil 2">
-              </div>
-              <div class="author-info">
-                <div class="author-name">Javier Ríos</div>
-                <div class="author-location">from Instagram</div>
-              </div>
-            </div>
-          </div>
+        <div class="columna-derecha-t">
+  <div id="carrusel-tarjetas">
 
-          <!-- Testimonio 3 -->
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              “Me encantó! Es como una guía práctica para fortalecer la mente. Lo leo cada mañana antes de empezar el día 💪📖”
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="perfil3.webp" alt="Perfil 3">
-              </div>
-              <div class="author-info">
-                <div class="author-name">Carlos Andrade</div>
-                <div class="author-location">from Youtube</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonio 4 -->
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              “No soy fan de los libros de desarrollo personal, pero este me encantó. Es más profundo, más real. Te da claridad.”
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="perfil4.webp" alt="Perfil 4">
-              </div>
-              <div class="author-info">
-                <div class="author-name">Andrés Pérez</div>
-                <div class="author-location">from Instagram</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonio 5 -->
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              “Soy cero espiritual y aún así me encantó. Tiene sentido, te hace pensar y te da herramientas reales para estar en paz contigo mismo.”
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="perfil5.webp" alt="Perfil 5">
-              </div>
-              <div class="author-info">
-                <div class="author-name">Carolina Vega</div>
-                <div class="author-location">from Facebook</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonio 6 -->
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              “Lo leí con mi café de la mañana y fue como terapia. 🧘‍♀️☕."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="perfil6.webp" alt="Perfil 6">
-              </div>
-              <div class="author-info">
-                <div class="author-name">Gianella Olivares</div>
-                <div class="author-location">from Tik Tok</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonio 7 -->
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              “No sabía que era el estoicismo, solo lo descargué por la portada. Pero no pensé que me ayudaría tanto en mi vida actual."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="perfil7.webp" alt="Perfil 7">
-              </div>
-              <div class="author-info">
-                <div class="author-name">Sofia Torres</div>
-                <div class="author-location">from Instagram</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonio 8 -->
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              “Ya lo recomendé a tres amigos. Todos estamos más tranquilos jaja."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="perfil8.webp" alt="Perfil 8">
-              </div>
-              <div class="author-info">
-                <div class="author-name">Diego Martinez</div>
-                <div class="author-location">from Facebook</div>
-              </div>
-            </div>
-          </div>
+    <div class="tarjeta" data-index="0">
+      <div class="perfil">
+        <img src="profile_1.webp" alt="Perfil 1" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Marco Antonio Paredes</strong>
+          <span>Este libro me recordó que la verdadera fuerza está en mantener la calma cuando todo parece derrumbarse 💪</span>
         </div>
       </div>
-
-      <!-- Navegación -->
-      <button class="testimonial-nav next" id="testimonialNext">
-        <i class="fas fa-chevron-right"></i>
-      </button>
     </div>
 
-    <!-- Indicadores -->
-    <div class="testimonial-dots" id="testimonialDots"></div>
-  </section>
+    <div class="tarjeta" data-index="1">
+      <div class="perfil">
+        <img src="profile_2.webp" alt="Perfil 2" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Fiorella Gutiérrez</strong>
+          <span>Con esto aprendí a entender que no todo se controla, pero sí cómo reacciono ante ello. Me cambió la perspectiva.</span>
+        </div>
+      </div>
+    </div>
 
+    <div class="tarjeta" data-index="2">
+      <div class="perfil">
+        <img src="profile_3.webp" alt="Perfil 3" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Franco Torres</strong>
+          <span>Ya no me dejo llevar por lo que no puedo cambiar. Este libro me ayudó a fortalecer mi mente y encontrar serenidad incluso en días difíciles 🙏</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="3">
+      <div class="perfil">
+        <img src="profile_4.webp" alt="Perfil 4" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Valeria Flores</strong>
+          <span>No imaginé que un libro pudiera darme tanta claridad. Lo he leído tres veces y cada vez encuentro una lección nueva sobre el autocontrol y la fortaleza interior.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="4">
+      <div class="perfil">
+        <img src="profile_6.webp" alt="Perfil 5" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Kevin Ramos</strong>
+          <span>Siempre fui escéptico sobre estos temas, pero el enfoque práctico del estoicismo me sorprendió. Este libro cambió la forma en que enfrento mis problemas.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="5">
+      <div class="perfil">
+        <img src="profile_5.webp" alt="Perfil 6" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Daniela Espinoza</strong>
+          <span>Me encanta 💕aprendí a responder con calma en lugar de reaccionar con impulso. De verdad, te cambia la vida ✨</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="6">
+      <div class="perfil">
+        <img src="profile_8.webp" alt="Perfil 7" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Álvaro Mendoza</strong>
+          <span>Lo leí con mi hermana y nos encantó. Es una guía práctica para entender cómo mantener la mente fuerte ante la adversidad. </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="7">
+      <div class="perfil">
+        <img src="profile_7.webp" alt="Perfil 8" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Brenda Cárdenas</strong>
+          <span>Al principio dudé, pero al aplicar los principios estoicos noté cómo mi ansiedad disminuyó. Aprendí a aceptar lo que no depende de mí.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="8">
+      <div class="perfil">
+        <img src="profile_13.webp" alt="Perfil 9" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Luis Miguel Ccanto</strong>
+          <span>Más que un libro, es una guía de vida. Aprendí a mantenerme firme cuando las cosas no salen como espero. Lo recomiendo a cualquiera que busque equilibrio.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="9">
+      <div class="perfil">
+        <img src="profile_9.webp" alt="Perfil 10" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Ana Lucía Palomino</strong>
+          <span>Desde que terminé de leerlo siento una calma interior que nunca había tenido. Aprendí a no dejar que las emociones me controlen. Un libro necesario</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="10">
+      <div class="perfil">
+        <img src="profile_12.webp" alt="Perfil 11" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Daniel Rojas</strong>
+          <span>Estaba pasando por un momento difícil, y este libro me dio herramientas para mantenerme fuerte. Cada capítulo me dejó una enseñanza real💡</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="11">
+      <div class="perfil">
+        <img src="profile_10.webp" alt="Perfil 12" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Milagros Salazar</strong>
+          <span>Gracias a este libro aprendí a no dejar que mi felicidad dependa de lo externo. Estoy más tranquila conmigo misma ☀️</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="12">
+      <div class="perfil">
+        <img src="profile_11.webp" alt="Perfil 13" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Paola Huarcaya</strong>
+          <span>Gracias, gracias, gracias. Este libro me ayudó a reconectar con mi paz interior y a ver los retos como oportunidades de crecimiento 🕊️</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" data-index="13">
+      <div class="perfil">
+        <img src="profile_14.webp" alt="Perfil 14" loading="lazy" decoding="async">
+        <div class="info">
+          <strong>Lucero Campos</strong>
+          <span>El Arte de la Fortaleza me enseñó que la disciplina mental es libertad. Ya no reacciono igual ante los problemas🔥</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+     </div>
+
+        <script src="script.js"></script>
 
 
   <!-- SECCIÓN 5: FAQ -->
@@ -1542,127 +1581,77 @@
       // Iniciar rotación automática
       startAutoRotation();
     });
-
-    // === TESTIMONIOS CARRUSEL ===
-    let currentTestimonial = 0;
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    const totalTestimonials = testimonialCards.length;
-    let testimonialInterval;
-
-    // Crear dots indicadores
-    function createDots() {
-      const dotsContainer = document.getElementById('testimonialDots');
-      for (let i = 0; i < totalTestimonials; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'dot';
-        if (i === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToTestimonial(i));
-        dotsContainer.appendChild(dot);
-      }
-    }
-
-    // Actualizar posición del carrusel
-    function updateTestimonialPosition() {
-      const track = document.getElementById('testimonialsTrack');
-      const offset = -currentTestimonial * 100;
-      track.style.transform = `translateX(calc(${offset}% - ${currentTestimonial * 30}px))`;
-      
-      // Actualizar dots
-      const dots = document.querySelectorAll('.dot');
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentTestimonial);
-      });
-    }
-
-    // Mover testimonio
-    function moveTestimonial(direction) {
-      currentTestimonial += direction;
-      
-      if (currentTestimonial < 0) {
-        currentTestimonial = totalTestimonials - 1;
-      } else if (currentTestimonial >= totalTestimonials) {
-        currentTestimonial = 0;
-      }
-      
-      updateTestimonialPosition();
-      resetTestimonialAutoplay();
-    }
-
-    // Ir a testimonio específico
-    function goToTestimonial(index) {
-      currentTestimonial = index;
-      updateTestimonialPosition();
-      resetTestimonialAutoplay();
-    }
-
-    // Autoplay de testimonios
-    function startTestimonialAutoplay() {
-      testimonialInterval = setInterval(() => {
-        moveTestimonial(1);
-      }, 5000);
-    }
-
-    // Reiniciar autoplay
-    function resetTestimonialAutoplay() {
-      clearInterval(testimonialInterval);
-      startTestimonialAutoplay();
-    }
-
-    // Inicializar testimonios al cargar la página
-    function initTestimonials() {
-      // Crear dots
-      createDots();
-      
-      // Agregar event listeners a botones de navegación
-      const prevBtn = document.getElementById('testimonialPrev');
-      const nextBtn = document.getElementById('testimonialNext');
-      
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => moveTestimonial(-1));
-      }
-      
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => moveTestimonial(1));
-      }
-      
-      // Iniciar autoplay
-      startTestimonialAutoplay();
-      
-      // Soporte para gestos táctiles en móviles
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      const wrapper = document.querySelector('.testimonials-wrapper');
-      
-      if (wrapper) {
-        wrapper.addEventListener('touchstart', (e) => {
-          touchStartX = e.changedTouches[0].screenX;
-        });
-        
-        wrapper.addEventListener('touchend', (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          handleSwipe();
-        });
-        
-        function handleSwipe() {
-          if (touchEndX < touchStartX - 50) {
-            moveTestimonial(1); // Swipe izquierda
-          }
-          if (touchEndX > touchStartX + 50) {
-            moveTestimonial(-1); // Swipe derecha
-          }
-        }
-      }
-    }
-
-    // Inicialización completa
-    window.addEventListener('DOMContentLoaded', () => {
-      // Inicializar testimonios
-      if (totalTestimonials > 0) {
-        initTestimonials();
-      }
-    });
   
+
+
+
+    /*TESTIMONIOS*/
+    document.addEventListener('DOMContentLoaded', () => {
+    const carrusel = document.getElementById('carrusel-tarjetas');
+    const tarjetas = Array.from(carrusel.querySelectorAll('.tarjeta'));
+    let currentIndex = 1; // El índice de la tarjeta central visible (Jake Edwards)
+
+    /**
+     * Aplica las clases de visibilidad y posición a todas las tarjetas
+     */
+    function updateCarrusel() {
+        tarjetas.forEach((tarjeta, index) => {
+            // Limpiar clases anteriores
+            tarjeta.className = 'tarjeta';
+
+            if (index === currentIndex) {
+                // Tarjeta central
+                tarjeta.classList.add('central');
+            } else if (index === (currentIndex - 1 + tarjetas.length) % tarjetas.length) {
+                // Tarjeta que va arriba (la anterior en el ciclo)
+                tarjeta.classList.add('arriba');
+            } else if (index === (currentIndex + 1) % tarjetas.length) {
+                // Tarjeta que va abajo (la siguiente en el ciclo)
+                tarjeta.classList.add('abajo');
+            } else {
+                // Tarjetas ocultas (si hay más de 3)
+                tarjeta.classList.add('oculto');
+            }
+        });
+    }
+
+    /**
+     * Mueve el carrusel a la siguiente tarjeta
+     */
+    function rotateCarrusel() {
+        // Mover el índice al siguiente, ciclando si llega al final
+        currentIndex = (currentIndex + 1) % tarjetas.length;
+        updateCarrusel();
+    }
+
+    // 1. Inicializar el carrusel al cargar la página
+    updateCarrusel(); 
+
+    function getPromoText(minutos, segundos) {
+        const tiempoFormato = `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+        
+        // --- 1. Regla para Teléfonos MUY ESTRECHOS (ej. 320px) ---
+        if (window.innerWidth <= 350) {
+            // El mensaje más corto posible: "¡OFERTA! 15:00"
+            return `¡OFERTA! <span class="timer">${tiempoFormato}</span>`;
+        }
+        
+        // --- 2. Regla para Móviles Estándar (351px a 600px) ---
+        else if (window.innerWidth <= 600) {
+            // Mensaje corto anterior: "⏳ Oferta finaliza en 15:00"
+            return `⏳ Finaliza en <span class="timer">${tiempoFormato}</span>`;
+        } 
+        
+        // --- 3. Regla para Escritorio (> 600px) ---
+        else {
+            return `🌟 ¡Promoción por tiempo limitado! Termina en <span class="timer">${tiempoFormato}</span>`;
+        }
+    }
+    
+    // 2. Configurar la rotación automática cada 6 segundos
+    setInterval(rotateCarrusel, 2000); // 6000ms = 6 segundos
+    
+});
   </script>
 
 </body>
